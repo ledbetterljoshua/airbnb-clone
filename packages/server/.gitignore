@@ -1,8 +1,0 @@
-.idea/
-.vscode/
-node_modules/
-build/
-temp/
-dump.rdb
-.env
-dist

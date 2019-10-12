@@ -1,7 +1,9 @@
 import * as Sparkpost from "sparkpost";
-const client = new Sparkpost(process.env.SPARKPOST_API_KEY);
+const { SPARKPOST_API_KEY } = process.env;
+const client = SPARKPOST_API_KEY && new Sparkpost(SPARKPOST_API_KEY);
 
 export const sendEmail = async (address: string, url: string) => {
+  if (!client) return;
   try {
     const data = await client.transmissions.send({
       options: {

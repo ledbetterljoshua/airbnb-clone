@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@abb_clone/controller": "1.0.0",
     "@abb_clone/common": "1.0.0",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",

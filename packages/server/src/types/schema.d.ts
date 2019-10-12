@@ -21,7 +21,7 @@ declare namespace GQL {
   }
 
   interface IQuery {
-    __typename: "Query";
+    __typename: 'Query';
     dummy2: string | null;
     bye2: string | null;
     dummy: string | null;
@@ -30,13 +30,13 @@ declare namespace GQL {
   }
 
   interface IUser {
-    __typename: "User";
+    __typename: 'User';
     id: string;
     email: string;
   }
 
   interface IMutation {
-    __typename: "Mutation";
+    __typename: 'Mutation';
     sendForgotPasswordEmail: boolean | null;
     forgotPasswordChange: Array<IError> | null;
     login: Array<IError> | null;
@@ -64,7 +64,7 @@ declare namespace GQL {
   }
 
   interface IError {
-    __typename: "Error";
+    __typename: 'Error';
     path: string;
     message: string;
   }

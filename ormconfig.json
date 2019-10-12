@@ -6,7 +6,7 @@
     "port": 4321,
     "username": "joshualedbetter1",
     "password": "",
-    "database": "airbnb_test",
+    "database": "airbnb_clone",
     "synchronize": true,
     "logging": true,
     "entities": ["src/entity/**/*.ts"],

@@ -10,6 +10,8 @@ import { cors } from "./cors";
 import { getExpressRateLimit } from "./middleware/getExpressRateLimit";
 import { redis } from "./redis";
 
+console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+
 export const startServer = async (): Promise<Server> => {
   if (process.env.NODE_ENV === "test") {
     await redis.flushall();

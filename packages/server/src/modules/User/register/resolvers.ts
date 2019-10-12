@@ -4,7 +4,7 @@ import { getErrorData } from "../../../utils/getErrorData";
 import * as yup from "yup";
 import { formatYupError } from "../../../utils/formatYupError";
 import { createConfirmEmailLink } from "./createConfirmEmailLink";
-// import { sendEmail } from "../../utils/sendEmail";
+import { sendEmail } from "../../../utils/sendEmail";
 
 import { duplicateEmail } from "@abb_clone/common";
 import { emailValidation, passwordValidation } from "@abb_clone/common";
@@ -47,7 +47,7 @@ export const resolvers: ResolverMap = {
 
       if (!isTesting) {
         console.log("should said email with link", link);
-        // await sendEmail(email, link);
+        await sendEmail(email, link);
       }
 
       return null;
