@@ -11,7 +11,8 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql|vue)\"",
     "format": "npm run prettier -- --write",
-    "validate": "npm run lint && npm run test"
+    "validate": "npm run lint && npm run test",
+    "build": "rimraf ./dist && tsc && copyfiles -u 1 src/**/*.graphql dist"
   },
   "husky": {
     "hooks": {
@@ -35,6 +36,7 @@
     "@types/uuid": "^3.4.5",
     "@types/ws": "^6.0.3",
     "@types/yup": "^0.26.24",
+    "copyfiles": "^2.1.1",
     "cross-env": "^6.0.3",
     "gql2ts": "^1.10.1",
     "husky": "^3.0.8",
@@ -42,6 +44,7 @@
     "lint-staged": "^9.4.2",
     "nodemon": "^1.19.3",
     "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
     "ts-node": "8.4.1",
     "tslint": "^5.20.0",

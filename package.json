@@ -1,11 +1,13 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "name": "airbnb_clone",
-  "authors": "author",
-  "version": "1.0.0",
-  "main": "pathToMain",
-  "dependencies": {}
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/rimraf",
+      "**/rimraf/**"
+    ]
+  }
 }
