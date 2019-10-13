@@ -1,6 +1,9 @@
 {
   "private": true,
   "name": "airbnb_clone",
+  "scripts": {
+    "build:server": "lerna run build --scope={@abb_clone/common,@abb_clone/server}"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
@@ -9,5 +12,8 @@
       "**/rimraf",
       "**/rimraf/**"
     ]
+  },
+  "devDependencies": {
+    "lerna": "^3.17.0"
   }
 }
